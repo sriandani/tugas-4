@@ -1,0 +1,36 @@
+flowchart:
+https://drive.google.com/file/d/19aE9ltDRFIWr8s7xcU9tyji-7qkVml2u/view?usp=sharing
+
+pseudo code;
+START
+    // Input matriks A dan B
+    PRINT "Masukkan orde matriks A (3x3):"
+    INPUT A[3][3]
+    
+    PRINT "Masukkan orde matriks B (3x3):"
+    INPUT B[3][3]
+
+    // Cek apakah matriks A dapat dikalikan dengan matriks B
+    IF (kolom A != baris B) THEN
+        PRINT "Matriks tidak dapat dikalikan"
+    ELSE
+        // Inisialisasi matriks hasil
+        FOR i FROM 0 TO 2 DO
+            FOR j FROM 0 TO 2 DO
+                C[i][j] = 0
+                // Perkalian matriks
+                FOR k FROM 0 TO 2 DO
+                    C[i][j] = C[i][j] + (A[i][k] * B[k][j])
+                END FOR
+            END FOR
+        END FOR
+
+        // Tampilkan hasil
+        PRINT "Hasil Perkalian Matriks:"
+        FOR i FROM 0 TO 2 DO
+            FOR j FROM 0 TO 2 DO
+                PRINT C[i][j] 
+            END FOR
+        END FOR
+    END IF
+END
